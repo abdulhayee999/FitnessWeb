@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif;
+                background-color: #000000; 
+                
+            }
+
+                .navbar {
+                    background: transparent !important;
+                    position: absolute;
+                    width: 100%;
+                    z-index: 1000;
+                    padding: 20px 0;
+                }
+                .navbar .navbar-brand {
+                    font-size: 20px;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    color: white !important;
+                }
+                .navbar-nav .nav-link {
+                    color: white !important;
+                    margin: 0 15px;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    transition: color 0.3s ease;
+                }
+                .navbar-nav .nav-link:hover {
+                    color: #f36100 !important;
+                }
+                .btn-primary {
+                    background-color: #f36100;
+                    border: none;
+                    font-size: 14px;
+                    padding: 10px 20px;
+                    text-transform: uppercase;
+                }
+
+
+
+
+
+
+        .hero-section { height: 50vh; 
+                        background: url('imagee.jpg') center/cover no-repeat;
+                        position: relative; }
+
+        .overlay { position: absolute;top: 0; left: 0;
+                   width: 100%; height: 100%;
+                   background: rgba(0, 0, 0, 0.5); }
+        .hero-content { position: absolute; top: 50%; left: 50%;
+                        transform: translate(-50%, -50%);
+                        text-align: center; color: white; }
+
+
+
+
+
+
+        .content-box {
+            background: #3d3d3d;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        }
+
+        .content-box:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+        .content-box img {
+            width: 100%; 
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+        }
+    .content-box:hover img {
+    transform: scale(1.05); 
+}
+
+.content-box h2, .content-box p {
+    transition: color 0.3s ease;
+}
+
+        
+        .content-box h2 {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .content-box:hover h2 {
+    color: #f36100;
+}
+
+    
+    
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    color: #f36100;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.slider-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.product-slider {
+    display: flex;
+    gap: 20px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    padding-bottom: 10px;
+}
+
+.product-card {
+    background: #1a1a1a;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 250px;
+    flex: 0 0 auto;
+    color: white;
+}
+.product-card img {
+width: 100%;
+height: 180px;
+object-fit: cover;
+background: black;
+padding: 0;
+border-bottom: 2px solid #f36100;
+}
+
+
+.product-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: white;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    color: #f36100;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.slider-btn:hover {
+    background-color: #111;
+    color: orange;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
+
+
+
+
+
+.footer {
+                            background-color: rgb(22, 22, 22);
+                            padding: 50px 0;
+                            font-size: 14px;
+                        }
+                
+                        .footer h5 {
+                            font-size: 20px;
+                            font-weight: 600;
+                            margin-bottom: 20px;
+                            color: white;
+                        }
+                
+                        .footer p {
+                            font-size: 14px;
+                            line-height: 1.8;
+                            color: #bbb;
+                            margin-bottom: 15px;
+                        }
+                
+                        .footer .social-icons {
+                            margin-top: 15px;
+                        }
+                
+                        .footer .social-icons a {
+                            color: #f36100;
+                            font-size: 16px;
+                            margin-right: 10px;
+                            transition: color 0.3s ease-in-out;
+                        }
+                
+                        .footer .social-icons a:hover {
+                            color: #fff;
+                        }
+                
+                        .footer a {
+                            color: #f36100;
+                            text-decoration: none;
+                            transition: color 0.3s ease-in-out;
+                        }
+                
+                        .footer a:hover {
+                            color: #fff;
+                        }
+                
+                        .footer ul {
+                            list-style: none;
+                            padding: 0;
+                        }
+                
+                        .footer ul li {
+                            margin-bottom: 8px;
+                        }
+                
+                        .footer .contact-info p {
+                            margin-bottom: 5px;
+                        }
+                
+                        .footer .copyright {
+                            text-align: center;
+                            margin-top: 30px;
+                            font-size: 13px;
+                            color: #777;
+                        }
+
+                        .dbread {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+.dbread a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.dbread a:hover {
+    color: #f36100;
+}
+
+.dbread .current-page {
+    color: #f36100;
+}
+
+
+.btn-submit, .btn-login {
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            text-transform: uppercase;
+            width: 100%;
+            font-weight: bold;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit {
+            background-color: #ff6600;
+        }
+
+        .btn-submit:hover {
+            background-color: #f09f69;
+        }
+
+        .btn-login {
+            background-color: #ff6600;
+        }
+
+        .btn-login:hover {
+            background-color: #f09f69;
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">PRIME FITNESS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="primefitness.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services & Equipments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ's</a></li>
+                    <li class="nav-item"><a class="nav-link" href="enquiryform.html">Enquiry Form</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-light" href="memberform.html">Become a Member</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="hero-section">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Services & Equipments</h1>
+            <div class="dbread">
+                <a href="index.html" class="home-link">Home</a> &gt; <span class="current-page">Services & Equipments</span>
+            </div>
+        </div>
+    </div>
+
+
+
+<br>
+<br>
+
+
+
+    <h1 style="color: #f36100; text-align: center;">Services</h1>
+
+    <hr style="border: 2px solid #f36100; width: 80%; margin: 30px auto;">
+
+
+    <div class="container mt-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="content-box">
+                    <img src="cycleee.jpg" alt="Expertise">
+                    <h2>Cycling</h2>
+                    <p>Experience high-energy indoor and outdoor cycling sessions designed to boost endurance, burn calories, and strengthen muscles. <br> Our advanced cycling equipment and expert-led classes <br> ensure an engaging and effective workout for all fitness levels.</p>
+                    <a href="memberform.html" class="btn btn-submit">Register</a>
+                    
+
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="content-box">
+                    <img src="swimmingg.jpg" alt="Expertise">
+                    <h2>Swimming</h2>
+                    <p>Dive into a refreshing and full-body workout with our top-class swimming facilities. Whether you're a beginner or a pro, our certified trainers and temperature-controlled pools provide the perfect environment for fitness, relaxation,<br> and skill improvement.</p>
+                    <a href="memberform.html" class="btn btn-submit">Register</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="content-box">
+                    <img src="gallery photos/gym1.jpg" alt="Expertise">
+                    <h2>Sports & Fitness</h2>
+                    <p>From strength training to high-intensity sports activities, we offer a diverse range of fitness programs to help you stay in peak shape. Our state-of-the-art gym equipment and expert coaching support your fitness journey with customized workout plans.</p>
+                    <a href="memberform.html" class="btn btn-submit">Register</a>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="content-box">
+                    <img src="gallery photos/gfit3.jpeg" alt="Expertise">
+                    <h2>Group Exercises</h2>
+                    <p>Stay motivated and energized with our fun and dynamic group exercise <br> classes! From Zumba to yoga, HIIT to functional training, our group sessions provide expert guidance, community support, and an exhilarating workout experience. </p>
+                    <a href="memberform.html" class="btn btn-submit">Register</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <center>
+        <div class="container mt-5">
+            <div class="row g-4 justify-content-center"> 
+                <div class="col-md-6"> 
+                    <div class="content-box text-start">  
+                        <img src="gallery photos/spa1.jpeg" alt="Expertise">
+                        <h2>Saloon & Spa</h2>
+                        <p>Relax, rejuvenate, and refresh at our luxurious salon and spa. <br> Indulge in soothing massages, beauty treatments, and wellness <br>therapies designed to help you unwind, recover, and look your best after every workout.</p>
+                        <a href="memberform.html" class="btn btn-submit">Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</center>
+
+<br>
+<br>
+
+
+
+
+
+
+<h1 style="color: #f36100; text-align: center;">Equipments</h1>
+
+
+<hr style="border: 2px solid #f36100; width: 80%; margin: 30px auto;">
+
+ 
+
+    <div class="container">
+        <h2 class="section-title">Sports & Fitness Equipments</h2>
+        <div class="slider-container">
+            <button class="slider-btn prev-btn">&#10094;</button>
+            <div class="product-slider" id="treadmill-slider">
+                <div class="product-card">
+                    <img src="gallery photos/ttt1.jpeg" alt="Conlin KL901S">
+                    <div class="product-name">Treadmills</div>
+                    <div class="product-description">Versatile cardio machines for walking, jogging, and running workouts.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/ttt2.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Elliptical trainers</div>
+                    <div class="product-description">Low-impact equipment that simulates walking, running, and stair climbing.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/ttt3.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Rowing machines</div>
+                    <div class="product-description">Full-body workout machines that engage arms, legs, and core muscles.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/ttt4.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Weight benches</div>
+                    <div class="product-description">Supports various weightlifting exercises for upper and lower body training.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/ttt5.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Power racks</div>
+                    <div class="product-description">Provides a safe structure for heavy weightlifting exercises like squats and presses.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/ttt6.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Free weights (dumbbells, kettlebells)</div>
+                    <div class="product-description">Essential for strength training and muscle building</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/ttt7.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Battle ropes</div>
+                    <div class="product-description">Improves endurance, strength, and cardiovascular fitness through dynamic movements.</div>
+                </div>
+            </div>
+            <button class="slider-btn next-btn">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Swimming Equipments</h2>
+        <div class="slider-container">
+            <button class="slider-btn prev-btn">&#10094;</button>
+            <div class="product-slider" id="treadmill-slider">
+                <div class="product-card">
+                    <img src="gallery photos/sss1.jpg" alt="Conlin KL901S">
+                    <div class="product-name">Swimming pool lane dividers</div>
+                    <div class="product-description">Keeps lanes organized and reduces wave interference for smooth swimming.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/sss2.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Kickboards</div>
+                    <div class="product-description">Helps swimmers focus on leg strength and kicking techniques.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/sss3.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Pull buoys</div>
+                    <div class="product-description">Supports the legs to isolate and strengthen the upper body during swim training.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/sss4.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Swim paddles</div>
+                    <div class="product-description">Enhances arm strength and stroke efficiency by increasing water resistance.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/sss5.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Floating dumbbells</div>
+                    <div class="product-description">Used for aquatic resistance training and rehabilitation exercises.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/sss6.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Resistance belts</div>
+                    <div class="product-description">Adds resistance to swimming movements to improve endurance and strength.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/sss7.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Swim fins</div>
+                    <div class="product-description">Enhances leg strength and propulsion by increasing surface area in the water.</div>
+                </div>
+            </div>
+            <button class="slider-btn next-btn">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Cycling Equipments</h2>
+        <div class="slider-container">
+            <button class="slider-btn prev-btn">&#10094;</button>
+            <div class="product-slider" id="treadmill-slider">
+                <div class="product-card">
+                    <img src="gallery photos/ccc1.jpeg" alt="Conlin KL901S">
+                    <div class="product-name">Stationary exercise bikes (spin bikes)</div>
+                    <div class="product-description">Designed for high-intensity indoor cycling workouts.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/ccc2.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Upright bikes</div>
+                    <div class="product-description">Mimics outdoor cycling with an upright riding posture and adjustable resistance.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/ccc3.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Air bikes</div>
+                    <div class="product-description">Uses air resistance for full-body workouts, increasing intensity with effort.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/ccc4.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Bike trainers</div>
+                    <div class="product-description">Converts regular bicycles into stationary workout machines for indoor training.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/ccc5.jpg" alt="Horizon TR5">
+                    <div class="product-name">Virtual cycling screens</div>
+                    <div class="product-description">Displays interactive cycling routes and real-time workout metrics.</div>
+                </div>
+            </div>
+            <button class="slider-btn next-btn">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Group Exercise Equipments</h2>
+        <div class="slider-container">
+            <button class="slider-btn prev-btn">&#10094;</button>
+            <div class="product-slider" id="treadmill-slider">
+                <div class="product-card">
+                    <img src="gallery photos/gee1.jpeg" alt="Conlin KL901S">
+                    <div class="product-name">Yoga mats</div>
+                    <div class="product-description">Provides cushioning and stability for yoga, Pilates, and stretching workouts.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/gee2.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Aerobic steppers</div>
+                    <div class="product-description">Adjustable platforms used for step workouts and cardio training.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/gee3.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Resistance bands</div>
+                    <div class="product-description">Adds resistance to exercises for toning and strength training.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/gee4.jpeg" alt="Horizon TR5">
+                    <div class="product-name">TRX suspension trainers</div>
+                    <div class="product-description">Uses body weight for full-body strength and balance training.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/gee5.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Stability balls</div>
+                    <div class="product-description">Improves core strength, balance, and flexibility through dynamic exercises.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/gee6.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Foam rollers</div>
+                    <div class="product-description">Aids in muscle recovery by reducing soreness and improving flexibility.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/gee7.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Jump ropes</div>
+                    <div class="product-description">Great for improving cardiovascular endurance and coordination.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/gee8.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Weighted bars </div>
+                    <div class="product-description">Provides resistance for various group fitness and strength workouts.</div>
+                </div>
+            </div>
+            <button class="slider-btn next-btn">&#10095;</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Saloon & Spa Equipments</h2>
+        <div class="slider-container">
+            <button class="slider-btn prev-btn">&#10094;</button>
+            <div class="product-slider" id="treadmill-slider">
+                <div class="product-card">
+                    <img src="gallery photos/ppp1.jpeg" alt="Conlin KL901S">
+                    <div class="product-name">Massage tables</div>
+                    <div class="product-description">Adjustable and comfortable tables for professional massage therapy.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/ppp2.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Steam room & sauna equipment</div>
+                    <div class="product-description">Enhances relaxation, detoxification, and muscle recovery.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/ppp3.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Facial steamers</div>
+                    <div class="product-description">Opens pores and improves skin hydration for facial treatments.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/ppp4.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Pedicure & manicure stations</div>
+                    <div class="product-description">Fully equipped stations for nail care services.</div>
+                </div>
+                <div class="product-card">
+                    <img src="gallery photos/ppp5.jpeg" alt="Horizon TR5">
+                    <div class="product-name">Hot stone massage kits</div>
+                    <div class="product-description">Heated stones used for deep relaxation and muscle tension relief.</div>
+                </div>
+            </div>
+            <button class="slider-btn next-btn">&#10095;</button>
+        </div>
+    </div>
+
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Prime Fitness is fitness club established in the year 1982. The fitness club has equipped with all basic fitness equipment and<br>also included the newly introduced. The Prime fitness club is the flagship brand for Prime Fitness Club Ltd, a UN based health and fitness services provider and a pioneer in the “Integrated Health Club Management Solutions’ business. Prime Fitness Club ltd focuses on staying fit is most important to meet the challenging requirements.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 contact-info">
+                    <h5>Contact Info</h5>
+                    <p><strong>Address:</strong> 123 Street, Hyderabad, Pakistan</p>
+                    <p><strong>Telephone:</strong> +92 333 333 3333</p>
+                    <p><strong>Email:</strong> primefitness@gmail.com</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="enquiryform.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="copyright">
+                <p>© 2025 Prime Fitness, All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<script>
+    document.querySelectorAll('.slider-container').forEach(container => {
+        const slider = container.querySelector('.product-slider');
+        const prevBtn = container.querySelector('.prev-btn');
+        const nextBtn = container.querySelector('.next-btn');
+        
+        prevBtn.addEventListener("click", () => {
+            slider.scrollBy({ left: -300, behavior: "smooth" });
+        });
+
+        nextBtn.addEventListener("click", () => {
+            slider.scrollBy({ left: 300, behavior: "smooth" });
+        });
+    });
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

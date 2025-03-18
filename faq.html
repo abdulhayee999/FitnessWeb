@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Prime Fitness</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif;
+                background-color: #000000; }
+                .navbar {
+                    background: transparent !important;
+                    position: absolute;
+                    width: 100%;
+                    z-index: 1000;
+                    padding: 20px 0;
+                }
+                .navbar .navbar-brand {
+                    font-size: 20px;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    color: white !important;
+                }
+                .navbar-nav .nav-link {
+                    color: white !important;
+                    margin: 0 15px;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    transition: color 0.3s ease;
+                }
+                .navbar-nav .nav-link:hover {
+                    color: #f36100 !important;
+                }
+                .btn-primary {
+                    background-color: #f36100;
+                    border: none;
+                    font-size: 14px;
+                    padding: 10px 20px;
+                    text-transform: uppercase;
+                }
+
+
+
+
+
+
+        .hero-section { height: 50vh; 
+                        background: url('imagee.jpg') center/cover no-repeat;
+                        position: relative; }
+
+        .overlay { position: absolute;top: 0; left: 0;
+                   width: 100%; height: 100%;
+                   background: rgba(0, 0, 0, 0.5); }
+        .hero-content { position: absolute; top: 50%; left: 50%;
+                        transform: translate(-50%, -50%);
+                        text-align: center; color: white; }
+
+                        .footer {
+                            background-color: rgb(22, 22, 22);
+                            padding: 50px 0;
+                            font-size: 14px;
+                        }
+                
+                        .footer h5 {
+                            font-size: 20px;
+                            font-weight: 600;
+                            margin-bottom: 20px;
+                            color: white;
+                        }
+                
+                        .footer p {
+                            font-size: 14px;
+                            line-height: 1.8;
+                            color: #bbb;
+                            margin-bottom: 15px;
+                        }
+                
+                        .footer .social-icons {
+                            margin-top: 15px;
+                        }
+                
+                        .footer .social-icons a {
+                            color: #f36100;
+                            font-size: 16px;
+                            margin-right: 10px;
+                            transition: color 0.3s ease-in-out;
+                        }
+                
+                        .footer .social-icons a:hover {
+                            color: #fff;
+                        }
+                
+                        .footer a {
+                            color: #f36100;
+                            text-decoration: none;
+                            transition: color 0.3s ease-in-out;
+                        }
+                
+                        .footer a:hover {
+                            color: #fff;
+                        }
+                
+                        .footer ul {
+                            list-style: none;
+                            padding: 0;
+                        }
+                
+                        .footer ul li {
+                            margin-bottom: 8px;
+                        }
+                
+                        .footer .contact-info p {
+                            margin-bottom: 5px;
+                        }
+                
+                        .footer .copyright {
+                            text-align: center;
+                            margin-top: 30px;
+                            font-size: 13px;
+                            color: #777;
+                        }
+
+
+                        .accordion-button:not(.collapsed) {
+                            background-color: #f36100 !important ;
+                            background-color: var(--bs-accordion-active-bg);
+                            box-shadow: inset 0 calc(-1* var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+                        }
+
+                        .dbread {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+}
+
+.dbread a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.dbread a:hover {
+    color: #f36100;
+}
+
+.dbread .current-page {
+    color: #f36100;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">PRIME FITNESS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="primefitness.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services & Equipments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ's</a></li>
+                    <li class="nav-item"><a class="nav-link" href="enquiryform.html">Enquiry Form</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-light" href="memberform.html">Become a Member</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+    <div class="hero-section">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common queries.</p>
+            <div class="dbread">
+                <a href="index.html" class="home-link">Home</a> &gt; <span class="current-page">FAQ</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h2 style="color: white;">FAQs</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                        What are your membership fees?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Our membership fees start at $30 per month...</div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                        What are your operating hours?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">We are open from 5 AM to 11 PM, seven days a week.</div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                        Do you offer personal training services?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes, we have certified trainers available for personal training sessions.</div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                        Do you provide group fitness classes?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes, we offer various group classes including yoga, Zumba, and HIIT.</div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                        Is there a trial period for new members?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes, we offer a 7-day free trial for new members.</div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                        Do you have locker and shower facilities?
+                    </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes, we provide lockers and showers for our members.</div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+                        Can I freeze my membership?
+                    </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes, memberships can be frozen for a maximum of 3 months per year.</div>
+                </div>
+            </div>
+
+            
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEight">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+                        Do you offer student discounts?
+                    </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes, we offer a 15% discount for students with a valid ID.</div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingNine">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine">
+                        Is there parking available?
+                    </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes, we have free parking spaces for our members.</div>
+                </div>
+            </div>
+
+        
+
+
+        </div>
+    </div>
+    
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Prime Fitness is fitness club established in the year 1982. The fitness club has equipped with all basic fitness equipment and<br>also included the newly introduced. The Prime fitness club is the flagship brand for Prime Fitness Club Ltd, a UN based health and fitness services provider and a pioneer in the “Integrated Health Club Management Solutions’ business. Prime Fitness Club ltd focuses on staying fit is most important to meet the challenging requirements.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 contact-info">
+                    <h5>Contact Info</h5>
+                    <p><strong>Address:</strong> 123 Street, Hyderabad, Pakistan</p>
+                    <p><strong>Telephone:</strong> +92 333 333 3333</p>
+                    <p><strong>Email:</strong> primefitness@gmail.com</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="aboutus.html">About</a></li>
+                        <li><a href="enquiryform.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="copyright">
+                <p>© 2025 Prime Fitness, All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    </head>
+
+
+
+
+
+
+
+</body>
+</html>
